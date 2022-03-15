@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/bootstrap";
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  strong {
+    margin-right: 1rem;
+  }
+}
+
+.nav-title {
+  margin-left: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-span {
+  font-weight: bold;
+}
+.todo-edit {
+  margin-right: 1rem;
+}
+.todo-filter {
+  display: flex;
+  justify-content: center;
+}
+.todo-title,
+.todo-head,
+.form-title {
+  text-align: center;
+}
+.filter-btn {
+  margin: 1rem;
+  span {
+    font-weight: bold;
+  }
+}
+.loader {
+  margin-top: 5rem;
+}
