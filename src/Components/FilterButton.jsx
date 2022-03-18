@@ -1,9 +1,14 @@
 import React from "react";
 
-export const FilterButton = () => {
+export const FilterButton = (props) => {
   return (
-    <button type="button" className="btn btn-outline-dark filter-btn">
-      <span>All</span>
+    <button
+      type="button"
+      className="btn btn-outline-dark filter-btn"
+      onClick={() => props.setFilter(props.name)}
+      aria-pressed={props.isPressed}
+    >
+      <span>{props.name}</span>
     </button>
   );
 };
