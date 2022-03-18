@@ -34,6 +34,29 @@
 .form-title {
   text-align: center;
 }
+.todo-head:focus {
+  color: teal;
+}
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.edit-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.save-btn {
+  display: flex;
+  margin: 1rem;
+}
+.cancel-btn {
+  display: flex;
+  margin: 1rem;
+}
 .filter-btn {
   margin: 1rem;
   span {
