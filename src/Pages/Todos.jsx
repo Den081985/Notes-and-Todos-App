@@ -3,6 +3,7 @@ import { FilterButton } from "../Components/FilterButton";
 import { Todo, usePrevious } from "../Components/Todo";
 import { TodoForm } from "../Components/TodoForm";
 import { nanoid } from "nanoid";
+import { TransitionGroup } from "react-transition-group";
 
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
