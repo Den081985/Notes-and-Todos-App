@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 //кастомный хук для получения предыдущего состояния
 export const usePrevious = (value) => {
