@@ -6,6 +6,8 @@ import { Alert } from "./Components/Alert";
 import { Navbar } from "./Components/Navbar";
 import { AlertState } from "./Context/Alert/AlertState";
 import { FirebaseState } from "./Context/Firebase/FirebaseState";
+import { Modal } from "./Pages/Modal";
+import { ModalState } from "./Context/Modal/ModalState";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
             <Switch>
               <Route path={"/"} exact component={Notes} />
               <Route path={"/todos"} component={Todos} />
+              <Route path={"/modal"} component={Modal} />
             </Switch>
           </div>
         </BrowserRouter>
