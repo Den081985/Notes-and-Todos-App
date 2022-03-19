@@ -52,6 +52,7 @@
 .save-btn {
   display: flex;
   margin: 1rem;
+  margin-bottom: 1rem;
 }
 .cancel-btn {
   display: flex;
@@ -65,4 +66,80 @@
 }
 .loader {
   margin-top: 5rem;
+}
+//анимирование элементов списка
+
+.note-exit-active {
+  animation: note 800ms ease-out forwards;
+}
+.note-enter-active {
+  animation: note 800ms ease-in alternate-reverse;
+}
+@keyframes note {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 0.7;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+//анимирование алерта
+//класс для появления элемента
+.alert-enter {
+  opacity: 0;
+}
+//во время появления элемента
+.alert-enter-active {
+  transition: opacity 500ms ease-out;
+  opacity: 1;
+}
+//во время исчезновения элемента
+.alert-exit-active {
+  transition: opacity 350ms ease-out;
+  opacity: 0;
+}
+//модальное окно
+.modal {
+  width: 100vm;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-container {
+  position: relative;
+  padding: 15px;
+  background-color: white;
+  height: 300px;
+  width: 500px;
+  border-radius: 5px;
+  // transform: scale(0.5);
+  // transition: 0.4s all;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-container.active {
+  // transform: scale(1);
+}
+.modal-title {
+  text-align: center;
+}
+.modal-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
