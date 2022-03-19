@@ -15,6 +15,11 @@ export const Navbar = () => (
           Todos
         </NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" aria-current="page" to={"/modal"}>
+          Modal
+        </NavLink>
+      </li>
     </ul>
   </nav>
 );
