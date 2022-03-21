@@ -125,6 +125,7 @@
   height: 300px;
   width: 500px;
   border-radius: 5px;
+
   // transform: scale(0.5);
   // transition: 0.4s all;
 }
@@ -140,4 +141,23 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+.remove-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 90px;
+}
+.modal-text {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 3rem;
+}
+.modal-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-text {
+  font-size: 16px;
+  color: darkgrey;
 }
