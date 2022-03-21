@@ -1,7 +1,12 @@
-import React, { useContext } from "react";
-import { ModalContext } from "../Context/Modal/modalContext";
+import React from "react";
 
-export const ModalBar = ({ active, setActive, children }) => {
+export const ModalBar = ({
+  active,
+  setActive,
+  children,
+  removeText,
+  closeModal,
+}) => {
   return (
     <div
       className={active ? `modal active` : `modal`}
@@ -14,9 +19,16 @@ export const ModalBar = ({ active, setActive, children }) => {
         <button
           type="button"
           className="btn btn-dark modal-btn"
-          onClick={() => setActive(false)}
+          onClick={() => closeModal()}
         >
           Close
+        </button>
+        <button
+          type="button"
+          className="btn btn-dark remove-btn"
+          onClick={() => removeText()}
+        >
+          Delete text
         </button>
         {children}
       </div>
