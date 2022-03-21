@@ -7,7 +7,6 @@ import { Navbar } from "./Components/Navbar";
 import { AlertState } from "./Context/Alert/AlertState";
 import { FirebaseState } from "./Context/Firebase/FirebaseState";
 import { Modal } from "./Pages/Modal";
-import { ModalState } from "./Context/Modal/ModalState";
 
 function App() {
   return (
