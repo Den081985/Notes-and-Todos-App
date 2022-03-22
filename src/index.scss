@@ -125,6 +125,7 @@
   height: 300px;
   width: 500px;
   border-radius: 5px;
+  margin: auto;
 
   // transform: scale(0.5);
   // transition: 0.4s all;
@@ -156,6 +157,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .btn-text {
   font-size: 16px;
