@@ -7,14 +7,14 @@ export const Modal = () => {
   const [modalActive, setModalActive] = useState(false);
   //функци получения записи из хранилища
   const getModalText = () => {
-    const text = JSON.parse(localStorage.getItem("modal") || "[]").join("");
+    const text = JSON.parse(localStorage.getItem("modal") || "[]").join(" ");
     return text;
   };
   let modaltext = getModalText();
   const [modalText, setModalText] = useState(modaltext);
   //функция удаления записей из хранилища
   const removeText = () => {
-    localStorage.clear();
+    localStorage.removeItem("modal");
     setModalText("");
   };
   //функция закрытия модального окна
