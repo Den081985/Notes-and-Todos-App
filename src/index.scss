@@ -126,9 +126,13 @@
   width: 500px;
   border-radius: 5px;
   margin: auto;
-
-  // transform: scale(0.5);
-  // transition: 0.4s all;
+  @media (max-width: 425px) {
+    max-width: 300px;
+    max-height: 300px;
+    margin: o auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .modal.active {
   opacity: 1;
@@ -152,6 +156,9 @@
   text-align: center;
   font-size: 16px;
   margin-top: 3rem;
+  @media (max-width: 425px) {
+    margin-top: 0;
+  }
 }
 .modal-div {
   display: flex;
@@ -162,4 +169,11 @@
 .btn-text {
   font-size: 16px;
   color: darkgrey;
+  margin-top: 3rem;
+  @media (max-width: 425px) {
+    margin-top: 1rem;
+  }
+}
+.navbar {
+  margin: 0 auto;
 }
