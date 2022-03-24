@@ -1,10 +1,13 @@
 import React, { useContext, useState } from "react";
+import { AlertContext } from "../Context/Alert/alertContext";
 import { ModalContext } from "../Context/Modal/modalContext";
 
 export const ModalForm = () => {
   const [value, setValue] = useState("");
 
   const { setModalText } = useContext(ModalContext);
+
+  const alert = useContext(AlertContext);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -24,8 +27,15 @@ export const ModalForm = () => {
     if (value) {
       e.preventDefault();
       putToStorage(value);
+      alert.show(
+        "Your modal message seccesfully saved.Push the button below to see your message!",
+        "success"
+      );
       setValue("");
       setModalText(value);
+    } else {
+      e.preventDefault();
+      alert.show("Put your modal message before submit!", "danger");
     }
   };
   return (
