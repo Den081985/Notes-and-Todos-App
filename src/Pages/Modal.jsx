@@ -46,9 +46,7 @@ export const Modal = () => {
           >
             Open modal
           </button>
-          <p className="btn-text mt-5">
-            Push the button to see your modal message!
-          </p>
+          <p className="btn-text">Push the button to see your modal message!</p>
         </div>
       </div>
     </ModalContext.Provider>
